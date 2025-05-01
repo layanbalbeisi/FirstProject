@@ -1,7 +1,11 @@
 package track2;
 
+import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -19,6 +23,7 @@ public class track2 {
 public void start() {
 	driver.get("https://codenboxautomationlab.com/practice/");
 	driver.manage().window().maximize();
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 }
 
 @Test (priority = 1, enabled = false)
@@ -40,7 +45,7 @@ public void myselector() {
 	myselect.selectByVisibleText("Appium");
 	//myselect.selectByValue("Selenium");
 }
-@Test
+@Test(priority = 3, enabled = false)
 public void checkbox() {
 	WebElement DivOfCheckBox = driver.findElement(By.id("checkbox-example"));
     List<WebElement> allcheckboxes = DivOfCheckBox.findElements(By.tagName("input"));
@@ -50,5 +55,45 @@ public void checkbox() {
     // for(int i = 0; i<allcheckboxes.size();i++) {
     //	allcheckboxes.get(i).click();
     }
+@Test(priority = 4, enabled= false)
+public void windowexample() {
+	WebElement OpenWindow = driver.findElement(By.id("openwindow"));
+	OpenWindow.click();
+	
+	Set<String> handles = driver.getWindowHandles();
+	List<String> windowList = new ArrayList<String>(handles);
+	driver.switchTo().window(windowList.get(1));
+	System.out.println(windowList);
+	
+	
+}
+@Test(priority = 5, enabled= false)
+public void openwindow() {
+	WebElement OpenWindow = driver.findElement(By.id("opentab"));
+	OpenWindow.click();
+	
+	Set<String> handles = driver.getWindowHandles();
+	List<String> windowList = new ArrayList<String>(handles);
+	driver.switchTo().window(windowList.get(1));
+	System.out.println(driver.getTitle());
+	
+}
+@Test (priority = 6, enabled= false)
+public void alratbutton() {
+	WebElement entername = driver.findElement(By.id("name"));
+	entername.sendKeys("layan");
+	WebElement AlertButton = driver.findElement(By.id("alertbtn"));
+	AlertButton.click();
+	driver.switchTo().alert().accept();
+	
+}
+@Test (priority = 7, enabled= true)
+public void table() {
+	WebElement Table = driver.findElement(By.id("product"));
+	List<WebElement> thetable = Table.findElements(By.tagName("tr"));
+	for (int i = 0;i<thetable.size();i++) {
+		System.out.print(thetable.get(i).getText());
+	}
+}
 }
 
