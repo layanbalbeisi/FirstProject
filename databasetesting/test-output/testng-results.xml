@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-05-26T13:59:05 EET" name="Default suite" finished-at="2025-05-26T13:59:11 EET" duration-ms="5477">
+    <groups>
+    </groups>
+    <test started-at="2025-05-26T13:59:05 EET" name="Default test" finished-at="2025-05-26T13:59:11 EET" duration-ms="5477">
+      <class name="databasetesting.databasetesting">
+        <test-method is-config="true" signature="mysreup()[pri:0, instance:databasetesting.databasetesting@5e1fa5b1]" started-at="2025-05-26T13:59:05 EET" name="mysreup" finished-at="2025-05-26T13:59:10 EET" duration-ms="4535" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mysreup -->
+        <test-method signature="ReadCustomer()[pri:0, instance:databasetesting.databasetesting@5e1fa5b1]" started-at="2025-05-26T13:59:10 EET" name="ReadCustomer" finished-at="2025-05-26T13:59:11 EET" duration-ms="842" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReadCustomer -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:databasetesting.databasetesting@5e1fa5b1]" started-at="2025-05-26T13:59:11 EET" name="afterTest" finished-at="2025-05-26T13:59:11 EET" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- databasetesting.databasetesting -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
